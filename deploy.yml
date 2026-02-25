@@ -1,0 +1,11 @@
+name: Build My App
+on:
+  push:
+    branches: [ main ]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test Docker Build
+        run: docker build -t my-test-app .

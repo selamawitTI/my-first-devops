@@ -1,0 +1,9 @@
+name: DevOps Test
+on: [push]
+jobs:
+  test-build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run a quick test
+        run: echo "Code is working!"
